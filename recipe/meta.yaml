@@ -1,18 +1,18 @@
 {% set name = "repoze.who" %}
-{% set version = "2.3" %}
+{% set version = "2.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b95dadc1242acc55950115a629cfb1352669774b46d22def51400ca683efea28
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cf97450de3c8eb5c03b4037be75b018db91befab1094204e452a0b1c0f7a94a6
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -40,13 +40,13 @@ test:
     - coverage
 
 about:
-  home: "http://www.repoze.org"
+  home: http://www.repoze.org
   license: BSD-3-Clause
-  license_family: "BSD"
+  license_family: BSD
   license_file: LICENSE.txt
-  summary: "repoze.who is an identification and authentication framework for WSGI."
-  doc_url: "https://pypi.org/project/repoze.who/"
-  dev_url: "https://github.com/repoze/repoze.who"
+  summary: repoze.who is an identification and authentication framework for WSGI.
+  doc_url: https://pypi.org/project/repoze.who/
+  dev_url: https://github.com/repoze/repoze.who
 
 extra:
   recipe-maintainers:
