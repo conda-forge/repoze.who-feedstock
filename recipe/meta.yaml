@@ -1,17 +1,17 @@
 {% set name = "repoze.who" %}
-{% set version = "2.4" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf97450de3c8eb5c03b4037be75b018db91befab1094204e452a0b1c0f7a94a6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/repoze_who-{{ version }}.tar.gz
+  sha256: c528a6ac5a9e069ed5a3750aef377622ece53edd0087cfc0b685f2a24c064274
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
